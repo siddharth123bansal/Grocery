@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "409410815141",
+    "firebase_url": "https://sequreaise-default-rtdb.firebaseio.com",
+    "project_id": "sequreaise",
+    "storage_bucket": "sequreaise.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409410815141:android:6b1566c2f86fd70271394c",
+        "android_client_info": {
+          "package_name": "com.example.grocery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409410815141-b58v3l6v9mde8holinaoekbs7e6g43hn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG1rj1kxi7XSLWlQnZYFbaM6x1SE9Lr1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409410815141-b58v3l6v9mde8holinaoekbs7e6g43hn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409410815141:android:fdb2de0a8af5211271394c",
+        "android_client_info": {
+          "package_name": "com.example.sequreaise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409410815141-b58v3l6v9mde8holinaoekbs7e6g43hn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG1rj1kxi7XSLWlQnZYFbaM6x1SE9Lr1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409410815141-b58v3l6v9mde8holinaoekbs7e6g43hn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
