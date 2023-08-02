@@ -1,5 +1,6 @@
 package com.example.grocery
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -24,7 +25,8 @@ class Login : AppCompatActivity() {
     }
 
     private fun login(phonenum: String) {
-
+        startActivity(Intent(this@Login,DashBoardActivity::class.java))
+        finish()
 
     }
 
