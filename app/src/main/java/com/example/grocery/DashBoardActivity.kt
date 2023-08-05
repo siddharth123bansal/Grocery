@@ -4,13 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.grocery.Adapters.BannerAdapter
 import com.example.grocery.Adapters.VegesAdapter
+import com.example.grocery.Models.Fruits
 import com.example.grocery.Models.VegesModel
 
 class DashBoardActivity : AppCompatActivity() {
     lateinit var bannerRecyclerView:RecyclerView
     lateinit var typesRec:RecyclerView
     lateinit var vegeList:ArrayList<VegesModel>
+    lateinit var typeList:ArrayList<Fruits>
+    lateinit var bannerList:ArrayList<Fruits>
     lateinit var vegesRecyclerView:RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +23,8 @@ class DashBoardActivity : AppCompatActivity() {
         typesRec=findViewById(R.id.vegeTypesView)
         vegesRecyclerView=findViewById(R.id.vegesView)
         vegeList= ArrayList()
+        typeList= ArrayList()
+        bannerList= ArrayList()
         vegeList.add(VegesModel(R.drawable.vege1,"Apple","1kg,","40"))
         vegeList.add(VegesModel(R.drawable.vege1,"Shimla Mirch","1kg,","40"))
         vegeList.add(VegesModel(R.drawable.vege1,"Kya Pta","1kg,","40"))
@@ -28,5 +34,23 @@ class DashBoardActivity : AppCompatActivity() {
         val vegeadapter=VegesAdapter(this,vegeList)
         vegesRecyclerView.adapter=vegeadapter
 
+        typeList.add(Fruits(R.drawable.apple))
+        typeList.add(Fruits(R.drawable.broccoli))
+        typeList.add(Fruits(R.drawable.apple))
+        typeList.add(Fruits(R.drawable.apple))
+        typeList.add(Fruits(R.drawable.apple))
+        val layoutManager1=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        typesRec.layoutManager=layoutManager1
+        val adapter=BannerAdapter(this,typeList,1)
+        typesRec.adapter=adapter
+
+        val layoutManager2=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        bannerRecyclerView.layoutManager=layoutManager2
+        bannerList.add(Fruits(R.drawable.banner1))
+        bannerList.add(Fruits(R.drawable.banner2))
+        bannerList.add(Fruits(R.drawable.banner1))
+        bannerList.add(Fruits(R.drawable.banner2))
+        val adapterb=BannerAdapter(this,bannerList,0)
+        bannerRecyclerView.adapter=adapterb
     }
 }
