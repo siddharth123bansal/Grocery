@@ -25,6 +25,10 @@ class Login : AppCompatActivity() {
     }
 
     private fun login(phonenum: String) {
+        val sd=getSharedPreferences("groc", MODE_PRIVATE)
+        val edit=sd.edit()
+        edit.putString("number",phonenum)
+        edit.commit()
         startActivity(Intent(this@Login,DashBoardActivity::class.java))
         finish()
 

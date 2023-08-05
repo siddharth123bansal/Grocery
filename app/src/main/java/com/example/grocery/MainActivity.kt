@@ -12,5 +12,15 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.shopNow).setOnClickListener {
             startActivity(Intent(this,Login::class.java))
         }
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val sd=getSharedPreferences("groc", MODE_PRIVATE)
+        if(sd.getString("number",null).toString().isNotEmpty()){
+            startActivity(Intent(this,DashBoardActivity::class.java))
+            finish()
+        }
     }
 }
