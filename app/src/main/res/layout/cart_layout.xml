@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:elevation="10dp"
+    android:layout_height="90dp">
+
+    <ImageView
+        android:id="@+id/cartImage"
+        android:layout_width="73dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vege1" />
+
+    <TextView
+        android:id="@+id/cartTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:text="ShimlaMirch"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/cartImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cartWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="1kg, 60"
+        android:textColor="#ff0000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/cartImage"
+        app:layout_constraintTop_toBottomOf="@+id/cartTitle" />
+
+    <ImageView
+        android:id="@+id/qAdd"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/add_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/add" />
+
+    <TextView
+        android:id="@+id/cartQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="9"
+        app:layout_constraintBottom_toBottomOf="@+id/qAdd"
+        app:layout_constraintEnd_toStartOf="@+id/qAdd"
+        app:layout_constraintTop_toTopOf="@+id/qAdd" />
+
+    <ImageView
+        android:id="@+id/qMinus"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/qAdd"
+        app:layout_constraintEnd_toStartOf="@+id/cartQuantity"
+        app:layout_constraintTop_toTopOf="@+id/qAdd"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/minus" />
+
+    <TextView
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="5dp"
+        android:background="#ABFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cartImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

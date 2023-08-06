@@ -1,7 +1,10 @@
 package com.example.grocery
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.grocery.Adapters.BannerAdapter
@@ -52,5 +55,14 @@ class DashBoardActivity : AppCompatActivity() {
         bannerList.add(Fruits(R.drawable.banner2))
         val adapterb=BannerAdapter(this,bannerList,0)
         bannerRecyclerView.adapter=adapterb
+        findViewById<ImageView>(R.id.CartDis).setOnClickListener {
+            startActivity(Intent(this,Cart::class.java))
+        }
+        findViewById<TextView>(R.id.seeAllFru).setOnClickListener {
+            startActivity(Intent(this,SeeAllActivity::class.java))
+        }
+        findViewById<TextView>(R.id.seeAllveges).setOnClickListener {
+            startActivity(Intent(this,SeeAllActivity::class.java))
+        }
     }
 }
