@@ -12,7 +12,6 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="306dp"
-        android:background="@drawable/detail_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -29,16 +28,17 @@
 
         <ImageView
             android:id="@+id/productImage"
-            android:layout_width="213dp"
-            android:layout_height="206dp"
-            android:layout_marginStart="148dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="151dp"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.485"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/back"
-            app:srcCompat="@drawable/vege1" />
+            app:srcCompat="@drawable/canvas" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="10dp"
-        android:text="1kg, 40"
+        android:text="Scenerio"
         android:textColor="#FF0000"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -110,35 +110,25 @@
         app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
         app:layout_constraintTop_toBottomOf="@+id/textView7">
 
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.444"
-            app:srcCompat="@drawable/lotus" />
 
         <TextView
             android:id="@+id/year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
-            android:text="100%"
+            android:text="Location"
             android:textColor="@color/green"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageView11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/expirey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Organic"
+            android:text="Rajasthan"
             app:layout_constraintEnd_toEndOf="@+id/year"
             app:layout_constraintStart_toStartOf="@+id/year"
             app:layout_constraintTop_toBottomOf="@+id/year" />
@@ -154,37 +144,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="3dp"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.444"
-            app:srcCompat="@drawable/star" />
-
         <TextView
             android:id="@+id/textView81"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
             android:text="4.5"
             android:textColor="@color/green"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageView12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reviews"
+            android:text="Rating"
             app:layout_constraintEnd_toEndOf="@+id/textView81"
             app:layout_constraintStart_toStartOf="@+id/textView81"
             app:layout_constraintTop_toBottomOf="@+id/textView81" />
@@ -200,35 +177,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7">
 
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.444"
-            app:srcCompat="@drawable/lotus" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
-            android:text="100%"
+            android:text="Seller"
             android:textColor="@color/green"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Organic"
+            android:text="Rajesh"
             app:layout_constraintEnd_toEndOf="@+id/textView8"
             app:layout_constraintStart_toStartOf="@+id/textView8"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -243,16 +210,6 @@
         app:layout_constraintStart_toEndOf="@+id/constraintLayout4"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.444"
-            app:srcCompat="@drawable/lotus" />
 
         <TextView
             android:id="@+id/textView4"
@@ -260,33 +217,57 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
-            android:text="100%"
+            android:text="type"
             android:textColor="@color/green"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textViewe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Organic"
+            android:text="Painting"
             app:layout_constraintEnd_toEndOf="@+id/textView4"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="342dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="20dp"
-        android:text="Add To Cart"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:cornerRadius="55dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginBottom="20dp"
+            android:text="Add To Cart"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            app:cornerRadius="55dp" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginBottom="20dp"
+            android:text="Contact now"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:cornerRadius="55dp" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

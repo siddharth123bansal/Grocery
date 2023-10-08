@@ -1,76 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardFull"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="163dp"
-    android:layout_height="214dp"
-    android:layout_marginLeft="24dp"
+    android:layout_marginLeft="10dp"
     android:layout_marginTop="10dp"
-    android:background="@drawable/veges_bg"
-    >
+    app:cardCornerRadius="15dp">
+<androidx.constraintlayout.widget.ConstraintLayout
 
-    <ImageView
-        android:id="@+id/vegesImage"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:src="@drawable/vege1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/vegeTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="22dp"
-        android:text="Bell Pepper Red"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vegesImage" />
+        android:background="@drawable/veges_bg">
 
-    <TextView
-        android:id="@+id/vegeWeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="2dp"
-        android:text="1kg,"
-        android:textColor="#FF324B"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vegeTitle" />
+        <ImageView
+            android:id="@+id/vegesImage"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:src="@drawable/canvas"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/vegePrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="3dp"
-        android:text="40"
-        android:textColor="#FF324B"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/vegeWeight"
-        app:layout_constraintTop_toBottomOf="@+id/vegeTitle" />
+        <TextView
+            android:id="@+id/vegeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="22dp"
+            android:text="Bell Pepper Red"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vegesImage" />
 
-    <ImageView
-        android:id="@+id/vegeAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/add_bg"
-        android:padding="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/vegePrice"
-        app:layout_constraintTop_toBottomOf="@+id/vegeTitle"
-        app:srcCompat="@drawable/add" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/vegeWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:text="1kg,"
+            android:textColor="#FF324B"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vegeTitle" />
+
+        <TextView
+            android:id="@+id/vegePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="3dp"
+            android:text="40"
+            android:textColor="#FF324B"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/vegeWeight"
+            app:layout_constraintTop_toBottomOf="@+id/vegeTitle" />
+
+        <ImageView
+            android:id="@+id/vegeAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/add_bg"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/vegePrice"
+            app:layout_constraintTop_toBottomOf="@+id/vegeTitle"
+            app:srcCompat="@drawable/add" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

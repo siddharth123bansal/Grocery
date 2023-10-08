@@ -19,10 +19,10 @@ class Cart : AppCompatActivity() {
         val lm=LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
         recycler.layoutManager=lm
         val list=ArrayList<CartModel>()
-        list.add(CartModel(R.drawable.vege1,"Mirch","1kg","3","60"))
-        list.add(CartModel(R.drawable.vege1,"Mirch","1kg","4","40"))
-        list.add(CartModel(R.drawable.vege1,"Mirch","1kg","2","30"))
-        list.add(CartModel(R.drawable.vege1,"Mirch","1kg","1","50"))
+        list.add(CartModel(R.drawable.canvas,"Painting","seller ","3","rakesh"))
+        list.add(CartModel(R.drawable.localart,"Cup","seller ","4","ramesh"))
+        list.add(CartModel(R.drawable.decors,"Jhula","seller ","2","sham"))
+        list.add(CartModel(R.drawable.localart,"Bartan","seller ","1","raj"))
         val adapter=CartAdapter(this,list,btn)
         recycler.adapter=adapter
         btn.setOnClickListener {
