@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Login">
-
+    tools:context=".CreateAccount">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,7 +39,18 @@
         android:text="Enter your Email Address" />
 
 
-
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="260dp"
+        android:layout_height="51dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/phone_bg"
+        android:gravity="center"
+        android:hint="enter a valid name"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
     <EditText
         android:id="@+id/editTextPhone"
         android:layout_width="260dp"
@@ -49,20 +59,33 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/phone_bg"
         android:gravity="center"
-        android:hint="example@xyz.com"
-        android:inputType="textEmailAddress"
+        android:hint="enter a valid phone no."
+        android:inputType="number"
+        android:maxLength="10"
         android:textColor="@color/black"
         android:textSize="16sp" />
-
     <EditText
-        android:id="@+id/textPassword"
+        android:id="@+id/editTextEmail"
         android:layout_width="260dp"
         android:layout_height="51dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:background="@drawable/phone_bg"
         android:gravity="center"
-        android:hint="**********"
+        android:hint="enter a valid e-mail"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/otp"
+        android:layout_width="260dp"
+        android:layout_height="51dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/phone_bg"
+        android:gravity="center"
+        android:hint="enter a vaild password"
         android:inputType="textPassword"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -78,15 +101,14 @@
         android:textAllCaps="false"
         android:text="Continue" />
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/loginUser"
         android:layout_width="270dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="14sp"
-        android:text="don't have an account? Create an account" />
-
+        android:text="already have an account? Login" />
 
 
 </LinearLayout>

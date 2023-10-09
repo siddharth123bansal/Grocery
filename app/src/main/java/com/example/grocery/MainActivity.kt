@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +19,8 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         val sd=getSharedPreferences("groc", MODE_PRIVATE)
-        if(sd.getString("number",null).toString().isNotEmpty()){
+//        Toast.makeText(this,sd.getString("_id",null).toString(),Toast.LENGTH_SHORT).show()
+        if(sd.getString("_id",null)!=null){
             startActivity(Intent(this,DashBoardActivity::class.java))
             finish()
         }
