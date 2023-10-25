@@ -17,17 +17,16 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/circle_bg">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/imageView8"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:src="@drawable/logo"
+                android:src="@drawable/app_logo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -63,10 +62,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="22dp"
         android:text="Hello,"
         android:textColor="@color/grey"
-        android:textSize="9sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="parent" />
 

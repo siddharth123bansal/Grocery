@@ -1,5 +1,6 @@
 package com.example.grocery.Adapters
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,8 +10,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.grocery.Models.CartModel
+import com.example.grocery.Models.CartsModel
 import com.example.grocery.R
-class CartAdapter(val context: Context,val list: ArrayList<CartModel>,btn:Button):RecyclerView.Adapter<CartAdapter.ViewHolder>() {
+class CartAdapter(val context: Context, val list: ArrayList<CartsModel>, btn:Button):RecyclerView.Adapter<CartAdapter.ViewHolder>() {
     class ViewHolder(itemview: View):RecyclerView.ViewHolder(itemview){
         val image=itemview.findViewById<ImageView>(R.id.cartImage)
         val add=itemview.findViewById<ImageView>(R.id.qAdd)
@@ -29,23 +31,24 @@ class CartAdapter(val context: Context,val list: ArrayList<CartModel>,btn:Button
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val cart=list.get(position)
+        Log.d("cartItems",list.size.toString())
         holder.image.setImageResource(cart.image)
         holder.title.setText(cart.title)
-        holder.weight.setText(cart.weight+","+cart.price)
-        holder.quantity.setText(cart.quantity)
+        holder.weight.setText(cart.price.toString())
+        holder.quantity.setText(cart.quantity.toString())
         holder.add.setOnClickListener {
             var item=Integer.parseInt(holder.quantity.text.toString())
             if(item<=5) {
                 holder.quantity.setText((++item).toString())
             }
-            else Toast.makeText(context,"Atmax 5 can be ordered",Toast.LENGTH_SHORT).show()
+            else Toast.makeText(context,"At max 5 can be ordered",Toast.LENGTH_SHORT).show()
         }
         holder.minus.setOnClickListener {
             var item=Integer.parseInt(holder.quantity.text.toString())
             if(item>1) {
                 holder.quantity.setText((--item).toString())
             }
-            else Toast.makeText(context,"Atleast 1 need to be ordered",Toast.LENGTH_SHORT).show()
+            else Toast.makeText(context,"At Least 1 item needed to be ordered",Toast.LENGTH_SHORT).show()
         }
     }
 }

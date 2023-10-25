@@ -1,5 +1,6 @@
 package com.example.grocery.Adapters
 
+import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -7,8 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.grocery.Helpers.AddItemsInCart
 import com.example.grocery.ItemDetailActivity
 import com.example.grocery.Models.VegesModel
 import com.example.grocery.R
@@ -34,10 +37,21 @@ class VegesAdapter(val contxt:Context,val list:ArrayList<VegesModel>):RecyclerVi
 
     override fun onBindViewHolder(holder: Veges, position: Int) {
         val veges=list.get(position)
+
         holder.image.setImageResource(veges.image)
         holder.title.setText(veges.name)
         holder.weight.setText(veges.weight)
         holder.price.setText(veges.price)
+        holder.add.setOnClickListener {
+            val progressDialog = ProgressDialog(contxt)
+            progressDialog.setCancelable(false)
+            progressDialog.setMessage("please wait...")
+            val cart=AddItemsInCart()
+            progressDialog.show()
+           val response= cart.insertItem(veges.image,holder.title.text.toString(),"Rajesh Kumar",veges.amount,contxt)
+            progressDialog.dismiss()
+            if(!response.isNullOrEmpty()) Toast.makeText(contxt,response,Toast.LENGTH_SHORT).show()
+        }
         holder.card.setOnClickListener {
             contxt.startActivity(Intent(contxt,ItemDetailActivity::class.java))
         }
