@@ -8,13 +8,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.grocery.Admin.AdminPanel
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class Login : AppCompatActivity() {
-    lateinit var phonenum:EditText
-    lateinit var pass:EditText
-    lateinit var submit:Button
+    private lateinit var phonenum:EditText
+    private lateinit var pass:EditText
+    private lateinit var submit:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -36,9 +37,13 @@ class Login : AppCompatActivity() {
 
     private fun login(email: String,password:String) {
         val progressDialog = ProgressDialog(this)
-        progressDialog?.setMessage("Loading...") // Set the message to display
-        progressDialog?.setCancelable(false) // Prevent users from dismissing the dialog by tapping outside
-        progressDialog?.show()
+        progressDialog.setMessage("Loading...") // Set the message to display
+        progressDialog.setCancelable(false) // Prevent users from dismissing the dialog by tapping outside
+        progressDialog.show()
+        if(email.trim() == "admin@admin.com" && password.trim() == ("password")){
+            startActivity(Intent(this@Login,AdminPanel::class.java))
+            finish()
+        }
         val auth=Firebase.auth
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
@@ -53,6 +58,7 @@ class Login : AppCompatActivity() {
                         edit.putString("name",password)
                         edit.putString("isSeller","no")
                         edit.commit()
+                        edit.apply()
                     }
                     progressDialog.dismiss()
                     startActivity(Intent(this@Login,DashBoardActivity::class.java))
@@ -68,13 +74,5 @@ class Login : AppCompatActivity() {
                     ).show()
                 }
             }
-
-
-
-
-    }
-
-    fun showToast(message:String){
-        Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
     }
 }
