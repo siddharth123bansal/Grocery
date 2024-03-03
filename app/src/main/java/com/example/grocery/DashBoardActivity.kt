@@ -29,7 +29,7 @@ class DashBoardActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.home->setCurrentFragment(HomeScreen())
                 R.id.Community -> setCurrentFragment(CommunityFragment())
-                R.id.Cart -> setCurrentFragment(CartFragment())
+                R.id.Cart -> startActivity(Intent(this,Cart::class.java))
                 R.id.Profile -> setCurrentFragment(ProfileFragment())
             }
             true

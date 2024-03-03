@@ -1,9 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Admin.AddBiding">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/AddBidingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/bidingImage"
+            android:layout_width="196dp"
+            android:layout_height="196dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/acc_profile" />
+
+        <EditText
+            android:id="@+id/bidingName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/seller_bg"
+            android:hint="Enter the painting name"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/bidingDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/seller_bg"
+            android:hint="Enter the description of the image"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/bidingBasePrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/seller_bg"
+            android:hint="Enter the Base Price"
+            android:inputType="number"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/bidingstartingDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/seller_bg"
+            android:padding="10dp"
+            android:text="Select The Biding Starting Date" />
+
+        <TextView
+            android:id="@+id/bidingEndingDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/seller_bg"
+            android:padding="10dp"
+            android:text="Select The Biding Ending Date " />
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Add biding" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bidingRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</LinearLayout>
